@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="/Project/ccs/login.css">
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <header>
+            <div class="logo"><img src="/img/game_icon.png" width="100px" height="100px" alt="home"></div>
+            <div class="searchBar">
+                <input type="text" placeholder="검색하세요.">
+                <button>검색</button>
+            </div>
+        </header>
+
+        <nav>
+            <button onclick="navigateTo('game/index.html')" class="nav-button game">게임</button>
+            <button onclick="navigateTo('search/index.html')" class="nav-button search">조건 검색</button>
+            <button onclick="navigateTo('mypage/index.html')" class="nav-button mypage">마이 페이지</button>
+            <button onclick="navigateTo('customer/index.html')" class="nav-button customer">고객센터</button>
+        </nav>
+
+        <div id="container" class="container">
+            <div class="content">
+                <div class="login_warp">
+                    <form id="login_pannel">
+                        <div class="login">
+                            <label for="id">아이디</label>
+                            <input type="text" id="id" placeholder="아이디를 입력하세요">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">비밀번호</label>
+                            <input type="password" id="password" placeholder="비밀번호를 입력하세요">
+                        </div>
+                        <button type="submit" class="login-btn">로그인</button>
+                    </form>
+                    <div class="additional-links">
+                        <a href="/Project/login/findId.html">아이디 찾기</a>
+                        <a href="/Project/login/findPw.html">비밀번호 찾기</a>
+                        <a href="/Project/register/index.html">회원 가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
