@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인</title>
-    <link rel="stylesheet" href="./ccs/main.css">
+    <link rel="stylesheet" href="./ccs/mainLogin.css">
 </head>
 <body>
     <div id="wrap">
@@ -19,7 +19,7 @@
                 <button type="button" onclick="navigateToSearch()">검색</button>
             </div>
         </header>
-        
+    
         <nav>
             <ul>
                 <li><a href="game/index.html" class="nav-button game">게임</a></li>
@@ -31,10 +31,23 @@
         
         <main>
             <div class="layout-left">
-                <h3>즐겨 찾기</h3>
+                <h3><a href="/mypage/favorite.html">즐겨 찾기</a></h3>
                 <div class="favoriteGame">
-                    <span>로그인 후 사용해주세요.</span>
-                </div>   
+                    <ul>
+                        <li class="game1">
+                            <a href="/game/game1.html">
+                                <img src="/image/game/StardewValley.jpg" alt="game1">
+                                <p class="caption">StardewValley</p>
+                            </a>
+                        </li>
+                        <li class="game2">
+                            <a href="/game/game2.html">
+                                <img src="/image/game/동물의 숲.jpg" alt="game2">
+                                <p class="caption">동물의 숲</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <h3>게임 게시판</h3>
                 <div class="notice">
@@ -116,16 +129,16 @@
                 </div>
             </div>    
             <div class="layout-right">
-                <div class="user-actions">
-                    <a href="/login/signIn/index.html" class="login">로그인</a>
-                    <a href="/login/signUp/index.html" class="register">회원가입</a>
-                    <div class="user-find">
-                        <a href="/login/signIn/findId.html" class="findId"><u>아이디 찾기</u></a> 
-                        <a href="./login/signIn/findPw.html" class="findPw"><u>비밀번호 찾기</u></a>
-                    </div>        
+                <div class="user-profile">
+                    <div class="profile">
+                        <img src="/image/basic_profile.png">
+                    </div>
+                    <a href="/mypage/index.html" class="userInfo">사용자 님</a>
+                    <a href="/index.html" class="logout-btn">로그아웃</a>
                 </div>
+
+                <h3>게시판 순위</h3>
                 <div class="game-ranking">
-                    <span>게임 게시판 순위</span>
                     <ul>
                         <li class="gameRank1">
                             <a href="./game/game1.html">

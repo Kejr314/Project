@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrap {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header, nav, main {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: center; /* header 내부 요소들을 수평 가운데 정렬 */
+}
+
+header {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+
+.logo {
+    border: none;
+    padding: 5px 40px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 706px;
+    height: 58px;
+    border: 1px solid #ccc;
+    border-radius: 33px;
+    overflow: hidden;
+}
+
+header .searchBar input {
+    flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    padding: 10px;
+    padding-left: 25px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 33px 0 0 33px; /* 왼쪽 둥근 모서리 */
+    font-size: 16px;
+}
+
+.searchBar button {
+    padding: 10px 20px;
+    border: none;
+    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-radius: 0 33px 33px 0; /* 오른쪽 둥근 모서리 */
+    height: 100%;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.searchBar button:hover {
+    background-color: #e0e0e0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+nav li {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.nav-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #F5FFFA;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #7FC9E2;
+}
+
+.register-warp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.register-form {
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.sign-up .field {
+    margin: 15px 0;
+}
+
+.sign-up input[type="text"], input[type="password"], .birth-inputs .register-btn {
+    width: 100%;
+    box-sizing: border-box; /* 패딩을 포함한 전체 너비 계산 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.sign-up input[type="text"], input[type="password"], input[type="email"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.register-btn {
+    margin-top: 20px;
+    padding: 15px 0;
+    width: 100%;
+    background-color: #7FC9E2;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #41ADD1;
+}
+
+.hr {
+    height: 2px;
+    border-top: 1px solid #ddd;
+    margin: 50px 0 30px 0;
+}
+
+.gender-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+}
+
+    .gender-options label {
+        margin: 0 10px;
+    }
+
+.birth-field {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+    .birth-field {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .birth-field input,
+    .birth-field select {
+        width: 32%;
+        padding: 15px 10px;
+    }
+
+    .birth-inputs {
+        display: flex;
+        gap: 10px;
+    }
+
+    .birth-inputs input[type="number"],
+    .birth-inputs select {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    /* 숫자 입력 필드의 화살표 제거 */
+    .birth-inputs input[type="number"]::-webkit-inner-spin-button,
+    .birth-inputs input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .birth-inputs input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+/* 선택 필드 스타일링 */
+.birth-inputs select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+}
+
+.email-field {
+    display: flex;
+    display: block;
+}
+
+    .email-inputs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .email-inputs input[type="text"],
+    .email-inputs select {
+        padding: 10px;
+    }
+
+    #email-id {
+        width: 10%;
+    }
+
+    #email-domain {
+        width: 150%;
+    }
+
+    .email-inputs span {
+        font-size: 1.2em;
+        padding: 0 5px;
+    }

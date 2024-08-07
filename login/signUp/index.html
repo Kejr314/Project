@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/ccs/login/signUp.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/image/video-console_2057777.png" width="100px" height="100px" alt="home"></div>
+                <!-- <a href="https://kr.freepik.com/search">Freepik 제작 아이콘</a> -->
+                </a>
+            <div class="searchBar">
+                <input type="text" placeholder="검색하세요.">
+                <button type="button" onclick="navigateToSearch()">검색</button>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="game/index.html" class="nav-button game">게임</a></li>
+                <li><a href="search/index.html" class="nav-button search">조건 검색</a></li>
+                <li><a href="mypage/index.html" class="nav-button mypage">마이 페이지</a></li>
+                <li><a href="customer/index.html" class="nav-button customer">고객센터</a></li>
+            </ul>
+        </nav>
+
+        <div class="register-warp">
+            <div class="register-form">
+                <div class="sign-up">
+                    <div class="user">
+                        <div class="field">
+                            <label for="id" class="label">아이디 <small>(필수)</small></label>
+                            <input type="text" class="userId">
+                        </div>
+                        <div class="field">
+                            <label for="password" class="label">비밀번호 <small>(필수)</small></label>
+                            <input type="password" class="userPw">
+                        </div>
+                        <div class="field">
+                            <label for="password" class="label">비밀번호 재확인 <small>(필수)</small></label>
+                            <input type="password" class="userPw-confirm">
+                        </div>
+
+                        <div class="hr"></div>
+                        
+                        <div class="field">
+                            <label for="userName" class="label">이름</label>
+                            <input type="text">
+                        </div>
+                        
+                        <b>성별</b>
+                        <div class="gender-options">
+                            <label><input type="radio" name="gender" value="male"> 남자</label>
+                            <label><input type="radio" name="gender" value="female"> 여자</label>
+                            <label><input type="radio" name="gender" value="other"> 선택 안함</label>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="userBirth" class="label">생년월일</label>
+                            <div class="birth-inputs">
+                                <input type="number" placeholder="년">
+                                <select id="birthMonth">
+                                    <option value="">월</option>
+                                    <option value="">1월</option>
+                                    <option value="">2월</option>
+                                    <option value="">3월</option>
+                                    <option value="">4월</option>
+                                    <option value="">5월</option>
+                                    <option value="">6월</option>
+                                    <option value="">7월</option>
+                                    <option value="">8월</option>
+                                    <option value="">9월</option>
+                                    <option value="">10월</option>
+                                    <option value="">11월</option>
+                                    <option value="">12월</option>
+                                </select>
+                                <input type="number" id="birthDay" placeholder="일" min="1" max="31">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="email" class="label">이메일</label>
+                            <div class="email-inputs">
+                                <input type="text">
+                                <span>@</span>
+                                <select id="email-domain">
+                                    <option value="">선택 안함</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="google.com">googl.com</option>
+                                    <option value="hanmail">hanmail.net</option>
+                                    <option value="custom-domain">직접 입력</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <input type="submit" class="register-btn" value="회원가입">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function navigateToSearch(){
+            location.href = "/search/result.html"
+        }
+    </script>
+</body>
+</html>
