@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="field">
-                            <input type="submit" class="register-btn" value="회원가입">
+                            <button type="button" onclick="register()" class="register-btn">회원가입</button>
                         </div>
                     </div>
                 </div>
@@ -110,6 +110,11 @@
     <script>
         function navigateToSearch(){
             location.href = "/search/result.html"
+        }
+
+        function register() {
+            alert("회원가입이 완료되었습니다.")
+            location.href = "../signIn/index.html"
         }
     </script>
 </body>
