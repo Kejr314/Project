@@ -27,6 +27,7 @@ header, nav, main {
     justify-content: center; /* header 내부 요소들을 수평 가운데 정렬 */
 }
 
+/* header */
 header {
     display: flex;
     width: 1280px;
@@ -122,76 +123,55 @@ main {
     justify-content: space-between;
 }
 
-
+/* 왼쪽 레이아웃 */
 .layout-left{
     width: 950px;
 }
 
-/* --------------------------------------------------------------------------- */
-.search-container {
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-}
+    .category-list ul {
+        display: table;
+        table-layout: fixed;
+    }
 
-.search-form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-}
+    .category-list li {
+        display: table-cell;
+    }
 
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
+    .game-card-list ul {
+        display: table;
+        list-style-type: none;
+        table-layout: fixed;
+        margin: auto;
+    }
 
-.form-row label, input {
-    width: 60px;
-    margin-right: 10px;
-}
+    .game-card-list li {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+    }
 
-.form-row label {
-    text-align: center;
-}
+    .game-card-list img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        object-fit: cover; /* 이미지 비율 유지 */
+    }
 
-.form-row input {
-    margin-left: 70px;
-}
+    .caption {
+        text-align: center;
+        margin: 0;
+        font-size: 15px;
+    }
 
+    .game-card-list .caption-plus {
+        visibility: hidden;
+        margin: 0;
+        font-size: 15px;
+    }
 
-.form-row select, .form-row input[type="text"] {
-    flex-grow: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.search-button {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.search-button:hover {
-    background-color: #e0e0e0;
-}
-
-.search-results {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-    height: 305px;
-}
-/* --------------------------------------------------------------------------- */
-
+/* 오른쪽 레이아웃 */
 .layout-right {
     width: 300px;
     margin-left: 30px;

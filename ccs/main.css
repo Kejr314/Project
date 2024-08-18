@@ -27,13 +27,13 @@ header, nav, main {
     justify-content: center; /* header 내부 요소들을 수평 가운데 정렬 */
 }
 
+/* header */
 header {
     display: flex;
     width: 1280px;
     margin: 0 auto;
     align-items: center;
-    padding: 10px 0;
-    
+    padding: 20px 0;
 }
 
 .logo {
@@ -46,22 +46,21 @@ header {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    height: 50px;
     width: 100%;
     max-width: 706px;
-    height: 58px;
     border: 1px solid #ccc;
-    border-radius: 33px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
 header .searchBar input {
     flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
-    padding: 10px;
     padding-left: 25px;
-    height: 100%;
+    padding-right: 25px;
     border: none;
     outline: none;
-    border-radius: 33px 0 0 33px; /* 왼쪽 둥근 모서리 */
+    border-radius: 15px 0 0 15px; /* 왼쪽 둥근 모서리 */
     font-size: 16px;
 }
 
@@ -69,7 +68,7 @@ header .searchBar input {
     padding: 10px 20px;
     border: none;
     border-left: 1px solid #ccc; /* 경계선 추가 */
-    border-radius: 0 33px 33px 0; /* 오른쪽 둥근 모서리 */
+    border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
     height: 100%;
     background-color: #f0f0f0;
     cursor: pointer;
@@ -83,59 +82,55 @@ header .searchBar input {
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    padding-bottom: 20px;
+    border-top: 1px solid #e3e5e8;
+    border-bottom: 1px solid #e3e5e8;
 }
 
 nav li {
-    flex: 1;
+    display: table-cell;
     margin: 0 5px;
 }
 
-    .nav-button {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-        background-color: #F5FFFA;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        text-decoration: none;
-        color: #333;
-        transition: background-color 0.3s ease;
-    }
+.nav-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #f8f8f8;
+}
 
-    .nav-button:hover {
-        background-color: #7FC9E2;
-    }
+.nav-button:hover {
+    font-weight: bold;
+    border-bottom-color: #333;
+}
 
 main {
     display: flex;
     justify-content: space-between;
 }
 
+/* 왼쪽 레이아웃 */
     .layout-left{
         width: 950px;
     }
 
-        .favoriteGame {
-            position: relative;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 0 0 1px #e3e5e8;
-            text-align: center;
-            height: 120px;
-        }
+    .favoriteGame {
+        border-radius: 8px;
+        box-shadow: 0 0 0 1px #e3e5e8;
+        padding: 20px;
+    }
 
-        .favoriteGame span {
-            display: flex; /* 가로 정렬 */
-            justify-content: center; /* 수평적으로 가운데 정렬 */
+        .favoriteGame p {
             align-items: center; /* 수직적으로 가운데 정렬 */
-            padding-top: 40px;
+            text-align: center;
         }
 
         .notice {
