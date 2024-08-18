@@ -3,76 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조건 검색</title>
-    <link rel="stylesheet" href="./ccs/search/filter.css">
+    <title>게임 페이지</title>
+    <link rel="stylesheet" href="./ccs/main.css">
 </head>
 <body>
     <div id="wrap">
         <header>
             <div class="logo">
                 <a href="/index.html">
-                    <img src="/image/video-console_2057777.png" width="100px" height="100px" alt="home">
+                    <img src="/image/video-console_2057777.png" width="100px" height="100px" alt="home"></div>
+                <!-- <a href="https://kr.freepik.com/search">Freepik 제작 아이콘</a> -->
                 </a>
-            </div>
             <div class="searchBar">
                 <input type="text" placeholder="검색하세요.">
                 <button type="button" onclick="navigateToSearch()">검색</button>
             </div>
         </header>
-        
+
         <nav>
             <ul>
-                <li><a href="game/index.html" class="nav-button game">게임</a></li>
-                <li><a href="search/filter.html" class="nav-button search active">조건 검색</a></li>
-                <li><a href="mypage/index.html" class="nav-button mypage">마이 페이지</a></li>
-                <li><a href="customer/index.html" class="nav-button customer">고객센터</a></li>
+                <li><a href="/game/board/index.html" class="nav-button game">게임</a></li>
+                <li><a href="/search/filter.html" class="nav-button search">조건 검색</a></li>
+                <li><a href="/mypage/index.html" class="nav-button mypage">마이 페이지</a></li>
+                <li><a href="/customer/index.html" class="nav-button customer">고객센터</a></li>
             </ul>
         </nav>
         
         <main>
             <div class="layout-left">
-                <div class="search-container">
-                    <form class="search-form">
-                        <div class="form-row">
-                            <label for="period">기간 :</label>
-                            <select id="period">
-                                <option value="">미선택</option>
-                                <option value="1day">1일</option>
-                                <option value="1weekend">1주</option>
-                                <option value="1month">1개월</option>
-                                <option value="custom">기간 선택</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <label for="genre">장르 :</label>
-                            <select id="genre">
-                                <option>장르1</option>
-                                <option>장르2</option>
-                                <option>장르3</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <input type="text" placeholder="검색하세요." class="filterSearch">
-                            <button type="button" onclick="filterToSearch()">검색</button>
-                        </div>
-                    </form>
-                    <div class="search-results">
-                        <p>검색 결과가 없습니다.</p>
-                    </div>
+                <h3><a href="/mypage/favorite.html">즐겨찾기</a></h3>
+                <div class="favoriteGame">
+                    <p>로그인 후 사용해주세요.</p>
+                </div>               
+                <h3>게임 게시판</h3>
+                <div class="notice">
+                    <table class="board-table">
+                        <colgroup>
+                            <col style="width: 88px;">
+                            <col>
+                            <col style="width: 100px;">
+                            <col style="width: 90px;">
+                            <col style="width: 70px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                                <th scope="col">조회</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="board-notice">
+                                <td>
+                                    <span class="board-tag-txt">공지사항</span>
+                                </td>
+                                <td class="title">
+                                    <a href="/game/board/index.html">공지사항입니다.</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>2024.08.07</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="board-number1">
+                                <td>
+                                    <a href="/game/game1.html" class="game-tag">게임1</a>
+                                </td>
+                                <td class="title">
+                                    <a href="/game/board/index.html">안녕하세요.</a>
+                                </td>
+                                <td>사용자1</td>
+                                <td>2024.08.07</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="board-number1">
+                                <td>
+                                    <a href="/game/game2.html" class="game-tag">게임2</a>
+                                </td>
+                                <td class="title">
+                                    <a href="/game/board/index.html">안녕하세요.</a>
+                                </td>
+                                <td>사용자2</td>
+                                <td>2024.08.07</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="board-number1">
+                                <td>
+                                    <a href="/game/game3.html" class="game-tag">게임3</a>
+                                </td>
+                                <td class="title">
+                                    <a href="/game/board/index.html">안녕하세요.</a>
+                                </td>
+                                <td>사용자3</td>
+                                <td>2024.08.07</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="board-number1">
+                                <td>
+                                    <a href="/game/game4.html" class="game-tag">게임4</a>
+                                </td>
+                                <td class="title">
+                                    <a href="/game/board/index.html">안녕하세요.</a>
+                                </td>
+                                <td>사용자4</td>
+                                <td>2024.08.07</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-
             <div class="layout-right">
-                <div class="user-profile">
-                    <div class="profile">
-                        <img src="/image/basic_profile.png">
-                    </div>
-                    <a href="/mypage/index.html" class="userInfo">사용자 님</a>
-                    <a href="/index.html" class="logout-btn">로그아웃</a>
+                <div class="user-actions">
+                    <a herf="/login/signIn/index.html" class="login">로그인</a>
+                    <a herf="./register/index.html" class="register">회원가입</a>
                 </div>
-
-                <h3>게시판 순위</h3>
                 <div class="game-ranking">
+                    <span>게임 게시판 순위</span>
                     <ul>
                         <li class="gameRank1">
                             <a href="./game/game1.html">
@@ -96,15 +144,5 @@
             </div>
         </main>
     </div>
-
-    <script>
-        function navigateToSearch(){
-            location.href = "/search/result.html"
-        }
-
-        function filterToSearch(){
-            // 결과 출력
-        }
-    </script>
 </body>
 </html>
