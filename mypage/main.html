@@ -22,10 +22,10 @@
             
             <nav>
                 <ul>
-                    <li><a href="/game/index.html" class="nav-button game">게임</a></li>
+                    <li><a href="/game/main.html" class="nav-button game">게임</a></li>
                     <li><a href="/search/filter.html" class="nav-button search">조건 검색</a></li>
-                    <li><a href="/mypage/index.html" id="nowPage" class="nav-button mypage">마이 페이지</a></li>
-                    <li><a href="/customer/index.html" class="nav-button customer">고객센터</a></li>
+                    <li><a href="/mypage/main.html" id="nowPage" class="nav-button mypage">마이 페이지</a></li>
+                    <li><a href="/customer/main.html" class="nav-button customer">고객센터</a></li>
                 </ul>
             </nav>
 
@@ -60,11 +60,30 @@
                                     <button type="button" onclick="changeNickname()">닉네임 변경</button>
                                 </div>
                             </div>
+
                             <div id="tab-profileInfo" rol="tabpanel" class="tab-content">
-                                <p>비밀번호를 입력하세요</p>
-                                <input type="password">
+                                <div class="field">
+                                    <div class="field-inner">
+                                        <p><b>아이디 </b>user01</p>
+                                    </div>
+                                    <div class="field-inner">
+                                        <p><b>비밀번호 </b><input type="password" class="userPw"></p>
+                                    </div>
+                                    <div class="field-inner">
+                                        <p><b>비밀번호 확인 </b><input type="password" class="userPw"></p>
+                                    </div>
+                                    <div class="field-inner">
+                                        <p><b>이름 </b>사용자</p>
+                                    </div>
+                                    <div class="field-inner">
+                                        <p><b>생년월일 </b>2000년 12월 24일</p>
+                                        </div>
+                                    <div class="field-inner">
+                                        <p><b>이메일 </b>user01@gamil.com</p>
+                                    </div>
+                                </div>
                                 <div>
-                                    <button type="button" onclick="checkPassword()" class="next-btn">다음</button>
+                                    <button type="button" onclick="userRemove()" class="userRemove-btn">회원 탈퇴</button>
                                 </div>
                             </div>
                             <div id="tab-favorite" rol="tabpanel" class="tab-content">
@@ -134,7 +153,7 @@
                         <div class="profile">
                             <img src="/image/basic_profile.png">
                         </div>
-                        <a href="/mypage/index.html" class="userInfo">사용자 님</a>
+                        <a href="/mypage/main.html" class="userInfo">사용자 님</a>
                         <a href="/index.html" class="logout-btn">로그아웃</a>
                     </div>
 
@@ -166,61 +185,62 @@
 
         <script>
         function navigateToSearch(){
-                    location.href = "/search/result.html"
+                    location.href = "/search/result.html";
                 }
 
             function changeNickname(){
                 alert("닉네임이 변경되었습니다.");
             }
 
-            function checkPassword(){
-                alert("확인되었습니다.");
+            function userRemove(){
+                alert("회원 탈퇴되었습니다.");
+                location.href = "/index.html";
             }
 
-            document.addEventListener('DOMContentLoaded', function() {
+            // 탭 기능
+            document.addEventListener('DOMContentLoaded', function() { // DOM이 완전히 로드된 후 코드 실행
+                // const : 재할당할 수 없는 변수 선언
+                // querySeletorAll : 모든 탭 버튼과 탭 내용 요소를 선택
                 const tabButtons = document.querySelectorAll('.tab-button');
                 const tabContents = document.querySelectorAll('.tab-content');
 
+                // 탭 활성화 : 선택된 탭 활성화, 다른 탭 비활성화
                 function activateTab(tabButton) {
                     // 모든 탭 버튼과 내용 비활성화
-                    tabButtons.forEach(button => {
-                        button.classList.remove('profile');
-                        button.setAttribute('aria-selected', 'false');
+                    tabButtons.forEach(button => { // forEach : 배열의 각 요소에 대해 함수 실행
+                        button.classList.remove('profile'); // 요소의 클래스 제거
+                        button.setAttribute('aria-selected', 'false'); // 요소의 속성 설정
                     });
-                    tabContents.forEach(content => content.classList.remove('profile'));
+                    tabContents.forEach(content => content.classList.remove('profile')); // 모든 탭 내용에서 'profile' 클래스 제거
 
                     // 선택된 탭 활성화
-                    tabButton.classList.add('profile');
-                    tabButton.setAttribute('aria-selected', 'true');
-                    const tabContent = document.getElementById(tabButton.getAttribute('aria-controls'));
-                    tabContent.classList.add('profile');
+                    tabButton.classList.add('profile'); // 선택된 탭 버튼에 'profile' 클래스 추가
+                    tabButton.setAttribute('aria-selected', 'true'); // aria-selected 속성을 true로 변경
+                    // 선택된 탭에 해당하는 내용을 찾아 'profile' 클래스 추가
+                    const tabContent = document.getElementById(tabButton.getAttribute('aria-controls')); 
+                    tabContent.classList.add('profile'); 
                 }
 
-                // 각 탭 버튼에 클릭 이벤트 리스너 추가
-                tabButtons.forEach(button => {
-                    button.addEventListener('click', () => activateTab(button));
-                });
+                    // 각 탭 버튼에 클릭 이벤트 리스너 추가
+                    // 클릭 시 activateTab 함수 호출
+                    tabButtons.forEach(button => {
+                        button.addEventListener('click', () => activateTab(button));
+                    });
 
-                // 초기 상태로 첫 번째 탭 활성화
-                activateTab(tabButtons[0]);
+                    // 초기 상태로 첫 번째 탭 활성화
+                    activateTab(tabButtons[0]);
 
-                // URL 해시에 따라 탭 활성화
-                function activateTabFromHash() {
-                    const hash = window.location.hash.substring(1); // '#' 제거
-                    if (hash === 'favorite') {
-                        const favoriteTab = document.querySelector('[aria-controls="tab-favorite"]');
-                        if (favoriteTab) {
-                            activateTab(favoriteTab);
+                    // URL 해시에 따라 탭 활성화
+                    function activateTabFromHash() {
+                        const hash = window.location.hash.substring(1); // '#' 제거
+                        if (hash === 'favorite') {
+                            const favoriteTab = document.querySelector('[aria-controls="tab-favorite"]');
+                            if (favoriteTab) {
+                                activateTab(favoriteTab);
+                            }
                         }
                     }
-                }
-            });
-
-            // 페이지 로드 시 URL 해시 확인
-            activateTabFromHash();
-
-            // URL 해시 변경 감지
-            window.addEventListener('hashchange', activateTabFromHash);
+                });
 
         // 즐겨찾기
             function deleteSelected() {

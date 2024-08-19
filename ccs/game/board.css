@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrap {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header, nav, main {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: center; /* header 내부 요소들을 수평 가운데 정렬 */
+}
+
+header {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    border: none;
+    padding: 5px 40px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    height: 50px;
+    width: 100%;
+    max-width: 706px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+header .searchBar input {
+    flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    outline: none;
+    border-radius: 15px 0 0 15px; /* 왼쪽 둥근 모서리 */
+    font-size: 16px;
+}
+
+.searchBar button {
+    padding: 10px 20px;
+    border: none;
+    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
+    height: 100%;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.searchBar button:hover {
+    background-color: #e0e0e0;
+}
+
+nav ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #e3e5e8;
+    border-bottom: 1px solid #e3e5e8;
+}
+
+nav li {
+    display: table-cell;
+    margin: 0 5px;
+}
+
+.nav-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.nav-button:hover {
+    font-weight: bold;
+    border-bottom-color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 왼쪽 레이아웃 */
+
+    .layout-left{
+        width: 950px;
+    }
+
+/* 오른쪽 레이아웃 */
+.layout-right {
+    width: 300px;
+    margin-left: 30px;
+}
+
+    .user-profile {
+        width: 280px;
+        padding: 21px 20px 18px;
+        line-height: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px #e3e5e8;
+        color: white; 
+    }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile img{
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+        
+        }
+
+            .userInfo {
+                display: flex;
+                margin: 15px 0;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                text-align: center;
+            }
+
+            .logout-btn {
+                display: block;
+                padding: 15px 0;
+                border: 1px solid rgba(0, 0, 0, .06);
+                border-radius: 4px;
+                background-color: #ff0000;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                transition: background-color 0.3s ease;
+            }
+
+            .logout-btn:hover {
+                background-color: #e40000;
+            }
+
+        .game-ranking {
+            padding: 21px 20px 18px;
+            line-height: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1px #e3e5e8;
+        }
+            
+            .game-ranking ol {
+                list-style: decimal; /* 숫자 목록으로 표시 */
+                padding-left: 20px;
+            }
+
+            .game-ranking h4 {
+                margin: none;
+                line-height: 40px;
+            }
+
+            .game-ranking ul {
+                list-style: rank;
+            }
+
+            .game-ranking li {
+                height: 36px;
+            }
+
+            .game-ranking span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 82px;
+                line-height: 21px;
+            }
+
+        .favoriteGame, .boardList, .user-profile, .game-ranking {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }

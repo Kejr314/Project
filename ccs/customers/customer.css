@@ -24,10 +24,9 @@ header, nav, main {
     max-width: 1280px;
     margin: 0 auto;
     padding: 10px 0;
-    justify-content: center; /* 내부 요소들을 수평 가운데 정렬 */
+    justify-content: center; /* header 내부 요소들을 수평 가운데 정렬 */
 }
 
-/* header */
 header {
     display: flex;
     width: 1280px;
@@ -124,232 +123,156 @@ main {
     justify-content: space-between;
 }
 
-/* 왼쪽 레이아웃 */
-    .layout-left{
-        padding-left: 10px;
-        width: 950px;
-    }
-        .mypage_warp {
+    /* 왼쪽 레이아웃 */
+        .layout-left{
+            width: 950px;
+        }
+    
+        .content {
             flex-grow: 1;
             margin-right: 20px;
-            padding: 20px;
             border: none;
         }
-        
-        .mypage_warp .text {
-            text-align: center;
-        }
-
-        .tab_wrap {
-            display: table;
-            table-layout: fixed;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            table-layout: fixed;
-        }
-        
-
-        .tab_item {
-            display: table-cell;
-            vertical-align: middle;
-            border-bottom: none;
-        }
-
-        .tab-inner {
-            border-top: none;
-        }
-        
-        .tab-inner button {
-            padding: 10px 15px;
-            background-color: #2A68B9;
-            color: white;
+    
+        .search-results {
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .tab-inner button:hover {
-            background-color: #1c4a8c;
-        }
-
-        .tab-button {
-            cursor: pointer;
-            padding: 10px 20px;
-            border: 1px solid #ccc;
-            border-bottom: none;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
-            background-color: #f0f0f0;
-            font-size: 15px;
-        }
-
-        .tab-button:hover {
-            background-color: #e0e0e0;
-        }
-        
-        .tab-button.profile {
-            display: inline-block;
-            background-color: #2A68B9;
-            color: white;
-        }
-
-        .tab-button.profile:hover {
-            background-color: #1c4a8c;
-        }
-        
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-        
-        /* 프로필 설정 */
-        .tab-content.profile {
-            display: block;
-            text-align: center;
-        }
-
-        .tab_profile {
-            display: block;
-            padding: 10px 15px;
-            text-decoration: none;
-            color: #333;
-            border-bottom: 3px solid transparent;
-        }
-        
-        .tab_profile.on {
-            border-bottom-color: #7FC9E2;
-            font-weight: bold;
-        }
-        
-        .profile-setting {
-            padding: 20px 120px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-        }
-        
-        .profile-setting p {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .profile-image {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-        
-        .profile-image img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        
-        .profile-nickName {
-            display: table;
-            table-layout: fixed;
-            align-items: center;
             padding: 10px;
-            margin: auto;
+            margin-bottom: 10px;
         }
-        
-        .profile-nickName input {
-            display: table-cell;
+    
+        .pagination {
+            text-align: center;
+        }
+    
+        aside {
+            width: 200px;
+        }
+    
+        .notice {
+            margin-top: 16px;
             padding: 10px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        /* 내 정보 */  
-        #tab-profileInfo .field {
-            margin: 20px 26%;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px #e3e5e8;
         }
         
-        #tab-profileInfo .field-inner {
-            margin-bottom: 20px;
-            display: flex;
-            text-align: left;
-        }
-        
-        #tab-profileInfo .field p {
-            margin: 0;
-            padding: 5px 0;
-        }
-        
-        #tab-profileInfo .field b {
-            width: 120px;
-            text-align: left;
-            display: inline-block;
-        }
-        
-        #tab-profileInfo input[type="password"] {
-            width: 250px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            text-align: left;
-        }
-        
-        #tab-profileInfo .userRemove-btn {
-            background-color: #ff4d4d;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-            text-align: left;
-        }
-        
-        #tab-profileInfo .userRemove-btn:hover {
-            background-color: #e40000;
-        }
-
-        /* 즐겨찾기 */
-        .favorite-main {
-            padding: 0 30px;
-        }
-
-        .select-button button{
-            float: right;
-            margin-left: 10px;
-            font-size: 12px;
-            padding: 5px;
-            margin-bottom: 15px;
-        }
-
-        .favorite-main table {
+        .board-table {
             width: 100%;
             border-collapse: collapse;
         }
-
-        .favorite-main th {
-            padding: 10px 0;
-            border-bottom: 1px solid #ccc;
-            background-color: #f2f2f2;
-        }
-
-        .favorite-main .gameName {
-            width: 70%;
-        }
-
-        .favorite-main td {
+        
+        .board-table th,
+        .board-table td {
             padding: 10px;
             text-align: center;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        
+        .board-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        
+        .board-table .title {
+            text-align: left;
+        }
+        
+        .board-tag-txt {
+            display: inline-block;
+            padding: 2px 5px;
+            border: 1px solid #ffc6c9;
+            background-color: #ffe3e4;
+            color: #ff4e59;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+    
+        /* 문의 태그 스타일 */
+        .inquiry-tag {
+            display: inline-block;
+            padding: 2px 5px;
+            color: #333;
+            font-size: 15px;
+            font-weight: bolder;
         }
 
-/* 오른쪽 레이아웃 */
+        /* 문의하기, 문의내역 버튼 컨테이너 */
+        .inquiry-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
+        /* 문의하기, 문의내역 버튼 공통 스타일 */
+        .inquiry-btn, .inquiry-history-btn {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 문의하기 버튼 스타일 */
+        .inquiry-btn {
+            background-color: #2A68B9;
+            color: white;
+        }
+
+        .inquiry-btn:hover {
+            background-color: #1c4a8c;
+        }
+
+        /* 문의내역 버튼 스타일 */
+        .inquiry-history-btn {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .inquiry-history-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* 게시판 테이블 스타일 수정 */
+        .board-table .title {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .board-table .title a:hover {
+            color: #2A68B9;
+            text-decoration: underline;
+        }
+
+        /* 페이지네이션 스타일 개선 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .pagination span {
+            margin: 0 10px;
+        }
+
+    /* 오른쪽 레이아웃 */
     .layout-right {
         width: 300px;
         margin-left: 30px;
@@ -402,7 +325,6 @@ main {
             }
 
         .game-ranking {
-            
             padding: 21px 20px 18px;
             line-height: 20px;
             border-radius: 5px;
