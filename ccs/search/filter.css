@@ -128,67 +128,105 @@ main {
 }
 
 /* --------------------------------------------------------------------------- */
-.search-container {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 0 auto;
-}
+    /* 검색 컨테이너 스타일 */
+        .search-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0 auto;
+        }
 
-.search-form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-}
+        /* 검색 폼 스타일 */
+        .search-form {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
+        /* 폼의 각 항목 스타일 */
+        .search-form li {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ccc; /* 구분선 추가 */
+            padding: 10px 0; /* 구분선과 내용 간격 조정 */
+            margin: 0 20px;
+        }
 
-.form-row label, input {
-    width: 60px;
-    margin-right: 10px;
-}
+        /* 레이블 스타일 */
+        .search-form label {
+            margin: 0 20px;
+            padding-right: 20px;
+            font-weight: bolder;
+            text-align: left;
+            margin-right: 10px;
+            width: 90px;
+        }
 
-.form-row label {
-    text-align: center;
-}
+        /* 입력 필드 및 선택 필드 스타일 */
+        .search-form select,
+        .search-form input[type="text"],
+        .search-form input[type="date"] {
+            flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        
+        .custom-period {
+            display: flex;
+            flex-direction: row; /* 수평 방향으로 배치 */
+            align-items: center; /* 수직 가운데 정렬 */
+            border-bottom: 1px solid #ccc; /* 구분선 추가 */
+            padding: 10px 0; /* 구분선과 내용 간격 조정 */
+            margin: 0 20px;
+        }
+        
+        .custom-period label {
+            font-weight: bolder;
+            text-align: left;
+            margin-right: 5px;
+        }
+        
+        .custom-period .date-range {
+            display: flex;
+            flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+            align-items: center; /* 수직 가운데 정렬 */
+            padding-right: 10px;
+        }
 
-.form-row input {
-    margin-left: 70px;
-}
+        .custom-period .date-range p {
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .custom-period input[type="date"] {
+            margin: 0 5px; /* 날짜 입력 필드 간격 조정 */
+        }
 
+        /* 검색 버튼 스타일 */
+        .search-button {
+            background-color: #2A68B9;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 15px;
+            cursor: pointer;
+            color: white;
+        }
 
-.form-row select, .form-row input[type="text"] {
-    flex-grow: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
+        .search-button:hover {
+            background-color: #2A68B9;
+        }
 
-.search-button {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.search-button:hover {
-    background-color: #e0e0e0;
-}
-
-.search-results {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-    height: 305px;
-}
+        /* 검색 결과 스타일 */
+        .search-results {
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            height: 300px;
+        }
 /* --------------------------------------------------------------------------- */
 
 .layout-right {

@@ -32,36 +32,38 @@
         <main>
             <div class="layout-left">
                 <div class="search-container">
-                    <div class="search-form">
-                        <div class="form-row">
+                    <ul class="search-form">
+                        <li>
                             <label for="period">기간</label>
-                            <input type="checkbox" id="period-check" checked>
                             <select id="period">
-                                <option value="" disabled selected>미선택</option>
+                                <option value="" selected>선택 안함</option>
                                 <option value="1day">1일</option>
                                 <option value="1weekend">1주</option>
                                 <option value="1month">1개월</option>
                                 <option value="custom">기간 선택</option>
                             </select>
-                        </div>
-                        <div id="custom-period" style="display: none;">
-                            <label for="starDate">시작 날짜</label>
-                            <input type="date" id="starDate" name="starDate">
-                            <label for="endDate">종료 날짜</label>
-                            <input type="date" id="endDate" name="endDate">
-                        </div>
-                        <div class="form-row">
-                            <label for="category">장르</label>
+                        </li>
+                        <li id="custom-period" class="custom-period" style="display: none;">
+                            <div class="date-range">
+                                <label for="starDate">기간 선택</label>
+                                <p>시작 날짜 : </p><input type="date" id="starDate" name="starDate"> <p>종료 날짜 : </p><input type="date" id="endDate" name="endDate">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="category">게임</label>
                             <select id="category">
-                                <option value="" selected>미선택</option>
+                                <option value="" selected>선택 안함</option>
+                                <option value="game1">스타듀벨리</option>
+                                <option value="game2">팰월드</option>
+                                <option value="game3">선택 안함</option>
                             </select>
-                        </div>
-                        <div class="form-row">
+                        </li>
+                        <li>
                             <label for="search">검색</label>
                             <input type="text" id="search">
                             <button type="button" class="search-button">검색</button>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <div class="search-results">
                         <p>검색 결과가 없습니다.</p>
                     </div>
@@ -114,7 +116,7 @@
 
                 periodSelect.addEventListener('change', function() {
                     if (this.value === 'custom') {
-                        customPeriod.style.display = 'block';
+                        customPeriod.style.display = 'flex';
                     } else {
                         customPeriod.style.display = 'none';
                     }

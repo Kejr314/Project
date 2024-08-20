@@ -150,7 +150,7 @@ main {
     
         .notice {
             margin-top: 16px;
-            padding: 10px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 0 1px #e3e5e8;
         }
@@ -175,14 +175,19 @@ main {
         .board-table .title {
             text-align: left;
         }
+
+        .board-notice td {
+            padding: 5px 10px;
+        }
         
         .board-tag-txt {
             display: inline-block;
-            padding: 2px 5px;
+            padding: 5px;
             border: 1px solid #ffc6c9;
             background-color: #ffe3e4;
             color: #ff4e59;
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: bolder;
             border-radius: 3px;
         }
     
@@ -195,45 +200,28 @@ main {
             font-weight: bolder;
         }
 
-        /* 문의하기, 문의내역 버튼 컨테이너 */
+        /* 문의하기 */
         .inquiry-buttons {
             display: flex;
-            justify-content: center;
+            justify-content: right;
             margin-top: 20px;
-            margin-bottom: 10px;
         }
 
-        /* 문의하기, 문의내역 버튼 공통 스타일 */
-        .inquiry-btn, .inquiry-history-btn {
-            padding: 10px 20px;
-            margin-left: 10px;
+        /* 문의하기 버튼 스타일 */
+        .inquiry-btn {
+            padding: 8px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        /* 문의하기 버튼 스타일 */
-        .inquiry-btn {
             background-color: #2A68B9;
             color: white;
         }
 
         .inquiry-btn:hover {
             background-color: #1c4a8c;
-        }
-
-        /* 문의내역 버튼 스타일 */
-        .inquiry-history-btn {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        .inquiry-history-btn:hover {
-            background-color: #e0e0e0;
         }
 
         /* 게시판 테이블 스타일 수정 */
@@ -256,16 +244,11 @@ main {
         }
 
         .pagination button {
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
+            background-color: white;
+            border: none;
             padding: 5px 10px;
             margin: 0 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .pagination button:hover {
-            background-color: #e0e0e0;
         }
 
         .pagination span {

@@ -33,40 +33,41 @@
         <div class="layout-left">
             <h3>문의 남기기</h3>
             <form class="inquiry-form">
-                <table>
-                    <tr>
-                        <th><label for="title">제목</label></th>
-                        <td><input type="text" id="title" name="title" placeholder="제목을 입력하세요"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="inquiry-type">문의 유형</label></th>
-                        <td>
-                            <select id="inquiry-type" name="inquiry-type">
-                                <option value="">미선택</option>
-                                <option value="회원">회원</option>
-                                <option value="이용문의">이용문의</option>
-                                <option value="기타">기타</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><label for="secret">비밀번호</label></th>
-                        <td>
-                            <input type="password" id="secret" name="secret">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="secret-checkbox" name="secret-checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><label for="content">내용</label></th>
-                        <td><textarea id="content" name="content" placeholder="내용을 입력하세요"></textarea></td>
-                    </tr>
-                </table>
+                <ul>
+                    <li>
+                        <label for="title">제목</label>
+                        <input type="text" id="title" name="title" placeholder="제목을 입력하세요">
+                    </li>
+                    <li>
+                        <label for="inquiry-type">문의 유형</label>
+                        <select id="inquiry-type" name="inquiry-type">
+                            <option value="" disabled selected>미선택</option>
+                            <option value="회원">회원</option>
+                            <option value="이용문의">이용문의</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="secret">비밀번호</label>
+                            <div class="password-container">
+                                <input type="password" id="secret" name="secret" disabled>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="secret-checkbox" name="secret-checkbox">
+                                    비밀글
+                                </label>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="content">내용</label>
+                        <textarea id="content" name="content" placeholder="내용을 입력하세요"></textarea>
+                    </li>
+                </ul>
+                <div class="buttons">
+                    <button type="submit" onclick="register()" class="submit-btn">등록하기</button>
+                    <button type="button" onclick="noticeList()" class="back-btn">문의 목록</button>
+                </div>
             </form>
-            <button type="submit" class="submit-btn">등록하기</button>
-            <button type="button" onclick="noticeList()" class="back-btn">목록으로 이동</button>
         </div>
         
         <div class="layout-right">
@@ -102,7 +103,35 @@
             </div>
         </div>
     </main>
-    
+    <script>
+        function navigateToSearch(){
+            location.href = "/search/result.html"
+        }
+
+        function register(){
+            alert("등록되었습니다.");
+            location.href = "/customer/main.html";
+        }
+
+        function noticeList(){
+            location.href = "./main.html";
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const secretCheckbox = document.getElementById('secret-checkbox');
+    const secretInput = document.getElementById('secret');
+
+    secretCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            secretInput.disabled = false;
+            secretInput.focus(); // 체크박스 선택 시 비밀번호 입력칸에 포커스
+        } else {
+            secretInput.disabled = true;
+            secretInput.value = ''; // 체크 해제 시 입력된 비밀번호 초기화
+        }
+    });
+});
+    </script>
 </div>
 </body>
 </html>
