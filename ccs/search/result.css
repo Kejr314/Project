@@ -297,7 +297,7 @@ main {
     }
 
         .game-ranking h4 {
-            margin: none;
+            margin: 0;
             line-height: 40px;
         }
 
