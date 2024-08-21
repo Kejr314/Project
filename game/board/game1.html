@@ -33,19 +33,24 @@
         <div class="layout-left">
             <h3>Stardew Bally</h3>
             <div class="gameBoard">
-                <div class="searchBoard">
-                    <select>
-                        <option value="tip" selected>공략</option>
-                        <option value="question">질문</option>
-                    </select>
-                    <input type="text">
-                    <button type="button">검색</button>
+                <div class="searchAndWrite">
+                    <div class="searchBoard">
+                        <select>
+                            <option value="all" selected>전체</option>
+                            <option value="tip" >공략</option>
+                            <option value="question">질문</option>
+                        </select>
+                        <input type="text">
+                        <button type="button">검색</button>
+                    </div>
+                    <button onClick="write()" class="btn-write">작성하기</button>
                 </div>
                 <table class="board-table">
                     <colgroup>
                         <col style="width: 100px;">
-                        <col>
+                        <col> <!-- 제목칸 길이 = 남은 공간 길이-->
                         <col style="width: 100px;">
+                        <col style="width: 90px;">
                         <col style="width: 90px;">
                     </colgroup>
                     <thead>
@@ -54,14 +59,22 @@
                             <th scope="col">제목</th>
                             <th scope="col">작성자</th>
                             <th scope="col">작성일</th>
+                            <th scope="col">조회수</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>공략</td>
-                            <td>계절별 농사 팁</td>
+                            <td id="select">공략</td>
+                            <td id="title">계절별 농사 팁</td>
                             <td>사용자</td>
-                            <td>2024-08-21</td>
+                            <td>2024.08.21</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td id="select">질문</td>
+                            <td id="title">멀티 어떻게 하나요?</td>
+                            <td>닉네임1</td>
+                            <td>2024.08.21</td>
                         </tr>
                     </tbody>
                 </table>

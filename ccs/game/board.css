@@ -97,6 +97,12 @@ nav li {
     margin: 0 5px;
 }
 
+nav #nowPage {
+    font-weight: bold;
+    color: #2A68B9;
+    box-shadow: 0px 5px 0px -2px #2A68B9;;
+}
+
 .nav-button {
     display: block;
     width: 100%;
@@ -122,6 +128,93 @@ main {
     .layout-left{
         width: 950px;
     }
+
+        .gameBoard{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .board-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .board-table th,
+        .board-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .searchAndWrite {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .searchBoard {
+            display: flex;
+            align-items: center;
+        }
+        
+        .searchBoard select,
+        .searchBoard input,
+        .searchBoard button {
+            height: 30px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .searchBoard select {
+            padding: 0 5px;
+        }
+        
+        .searchBoard input {
+            padding: 0 10px;
+            width: 300px;
+        }
+        
+        .searchBoard button {
+            padding: 0 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .searchAndWrite .btn-write{
+            background-color: #2A68B9;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .searchAndWrite .btn-write:hover {
+            background-color: #1c4a8c;
+        }
+        
+        .board-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        
+        .board-table #select {
+            font-weight: bold;
+        }
+
+        .board-table #title {
+            padding-left: 20px !important;
+            text-align: left;
+        }
+
+        .board-notice td {
+            padding: 5px 10px;
+        }
 
 /* 오른쪽 레이아웃 */
 .layout-right {
