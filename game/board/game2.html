@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동물의 숲</title>
+    <link rel="stylesheet" href="/ccs/game/game.css">
+</head>
+<body>
+    <div id="wrap">
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/image/video-console_2057777.png" width="100px" height="100px" alt="home"></div>
+            <!-- <a href="https://kr.freepik.com/search">Freepik 제작 아이콘</a> -->
+            </a>
+        <div class="searchBar">
+            <input type="text" placeholder="검색하세요.">
+            <button type="button" onclick="navigateToSearch()">검색</button>
+        </div>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="/game/main.html" id="nowPage" class="nav-button game">게임</a></li>
+            <li><a href="/search/filter.html" class="nav-button search">조건 검색</a></li>
+            <li><a href="/mypage/main.html" class="nav-button mypage">마이 페이지</a></li>
+            <li><a href="/customer/main.html" class="nav-button customer">고객센터</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="layout-left">
+            <div class="gameTitle">
+                <img src="/image/game/동물의 숲.jpg" id="icon">
+                <h3>동물의 숲</h3>
+            </div>
+            <div class="gameBoard">
+                <div class="searchAndWrite">
+                    <div class="searchBoard">
+                        <select>
+                            <option value="all" selected>전체</option>
+                            <option value="tip" >공략</option>
+                            <option value="question">질문</option>
+                        </select>
+                        <input type="text">
+                        <button type="button">검색</button>
+                    </div>
+                    <a href="./writeGame2.html" class="write">작성하기</a>
+                </div>
+                <table class="board-table">
+                    <colgroup>
+                        <col style="width: 100px;">
+                        <col> <!-- 제목칸 길이 = 남은 공간 길이-->
+                        <col style="width: 100px;">
+                        <col style="width: 90px;">
+                        <col style="width: 90px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">작성일</th>
+                            <th scope="col">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="select">공략</td>
+                            <td id="title"><a href="./detail/detailGame2.html">계절별 농사 팁</a></td>
+                            <td>사용자</td>
+                            <td>2024.08.21</td>
+                            <td>555</td>
+                        </tr>
+                        <tr>
+                            <td id="select">질문</td>
+                            <td id="title">멀티 어떻게 하나요?</td>
+                            <td>닉네임1</td>
+                            <td>2024.08.21</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td id="select">질문</td>
+                            <td id="title">낚시 어떻게 해요?</td>
+                            <td>닉네임2</td>
+                            <td>2024.08.22</td>
+                            <td>11</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button>◀<button><span>1 / 2</span><button>▶</button>
+                </div>
+            </div>
+        </div>
+        <div class="layout-right">
+            <div class="user-profile">
+                <div class="profile">
+                    <img src="/image/basic_profile.png">
+                </div>
+                <a href="/mypage/main.html" class="userInfo">사용자 님</a>
+                <a href="/index.html" class="logout-btn">로그아웃</a>
+            </div>
+
+            <h3>게시판 순위</h3>
+            <div class="game-ranking">
+                <ul>
+                    <li class="gameRank1">
+                        <a href="./game1.html">
+                            <span>게임1</span>
+                        </a>
+                    </li>
+                    <li class="gameRank2">
+                        <a href="./game2.html">게임2</a>
+                    </li>
+                    <li class="gameRank3">
+                        <a href="./game3.html">게임3</a>
+                    </li>
+                    <li class="gameRank4">
+                        <a href="./ame4.html">게임4</a>
+                    </li>
+                    <li class="gameRank5">
+                        <a href="./game5.html">게임5</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+</div>
+</body>
+</html>

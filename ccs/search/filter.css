@@ -48,7 +48,7 @@ header {
     height: 50px;
     width: 100%;
     max-width: 706px;
-    border: 1px solid #ccc;
+    border: 1px solid #e3e5e8;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -66,7 +66,7 @@ header .searchBar input {
 .searchBar button {
     padding: 10px 20px;
     border: none;
-    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-left: 1px solid #e3e5e8; /* 경계선 추가 */
     border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
     height: 100%;
     background-color: #f0f0f0;
@@ -135,7 +135,7 @@ main {
 /* --------------------------------------------------------------------------- */
     /* 검색 컨테이너 스타일 */
         .search-container {
-            border: 1px solid #ccc;
+            border: 1px solid #e3e5e8;
             border-radius: 5px;
             padding: 20px;
             margin: 0 auto;
@@ -152,7 +152,7 @@ main {
         .search-form li {
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #ccc; /* 구분선 추가 */
+            border-bottom: 1px solid #e3e5e8; /* 구분선 추가 */
             padding: 10px 0; /* 구분선과 내용 간격 조정 */
             margin: 0 20px;
         }
@@ -173,7 +173,7 @@ main {
         .search-form input[type="date"] {
             flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
             padding: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #e3e5e8;
             border-radius: 3px;
             margin-right: 10px;
         }
@@ -182,7 +182,7 @@ main {
             display: flex;
             flex-direction: row; /* 수평 방향으로 배치 */
             align-items: center; /* 수직 가운데 정렬 */
-            border-bottom: 1px solid #ccc; /* 구분선 추가 */
+            border-bottom: 1px solid #e3e5e8; /* 구분선 추가 */
             padding: 10px 0; /* 구분선과 내용 간격 조정 */
             margin: 0 20px;
         }
@@ -227,7 +227,7 @@ main {
         /* 검색 결과 스타일 */
         .search-results {
             margin: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #e3e5e8;
             border-radius: 5px;
             padding: 15px;
             text-align: center;

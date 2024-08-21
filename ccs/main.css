@@ -49,7 +49,7 @@ header {
     height: 50px;
     width: 100%;
     max-width: 706px;
-    border: 1px solid #ccc;
+    border: 1px solid #e3e5e8;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -67,7 +67,7 @@ header .searchBar input {
 .searchBar button {
     padding: 10px 20px;
     border: none;
-    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-left: 1px solid #e3e5e8; /* 경계선 추가 */
     border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
     height: 100%;
     background-color: #f0f0f0;
@@ -167,6 +167,7 @@ main {
         
         .board-table .title {
             text-align: left;
+            font-size: 14px;
         }
         
         .board-tag-txt {
@@ -175,18 +176,16 @@ main {
             border: 1px solid #ffc6c9;
             background-color: #ffe3e4;
             color: #ff4e59;
+            font-weight: bolder;
             font-size: 12px;
             border-radius: 3px;
         }
         
         .game-tag {
-            display: inline-block;
             padding: 2px 5px;
-            border: 1px solid #e0e0e0;
-            background-color: #f0f0f0;
-            color: #666;
-            font-size: 12px;
-            border-radius: 3px;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
         }
         
         a.game-tag {
@@ -196,15 +195,11 @@ main {
         a.game-tag:hover {
             text-decoration: none;
         }
-        
-        .board-table a {
-            color: #333;
-            text-decoration: none;
+
+        .board-number {
+            font-size: 14px;
         }
-        
-        .board-table a:hover {
-            text-decoration: underline;
-        }
+
 
     .layout-right {
         width: 300px;

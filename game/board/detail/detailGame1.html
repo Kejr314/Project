@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/ccs/game/detail.css">
+</head>
+<body>
+    <div id="wrap">
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/image/video-console_2057777.png" width="100px" height="100px" alt="home"></div>
+            <!-- <a href="https://kr.freepik.com/search">Freepik 제작 아이콘</a> -->
+            </a>
+        <div class="searchBar">
+            <input type="text" placeholder="검색하세요.">
+            <button type="button" onclick="navigateToSearch()">검색</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/game/main.html" id="nowPage" class="nav-button game">게임</a></li>
+            <li><a href="/search/filter.html" class="nav-button search">조건 검색</a></li>
+            <li><a href="/mypage/main.html" class="nav-button mypage">마이 페이지</a></li>
+            <li><a href="/customer/main.html" class="nav-button customer">고객센터</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="layout-left">
+            <div class="gameTitle">
+                <div class="nameAndMove">
+                    <img src="/image/game/StardewValley.jpg" id="icon">
+                    <h3>Stardew Bally</h3>
+                </div>
+                <button onclick="boardList()">목록</button>
+            </div>
+            <div class="articleContentBox">
+                <div class="article_tag">[ 공략 ] </div>
+                <div class="article_header">
+                    <div class="article_title">
+                        <span>계절별 농사 팁</span>
+                        <p class="article_date">2024.03.16</p>
+                    </div>
+                    <div class="writerInfo">
+                        <img src="/image/basic_profile.png" width="30px" height="30px"> 닉네임1
+                    </div>
+                </div>
+                <div class="article_container">
+                    내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                </div>
+                <div class="commentBox">
+                    <div class="commentList">
+                        <div class="commentUserInfo">
+                            <img src="/image/basic_profile.png" alt="Profile" class="profileImage">
+                            <div>
+                                <span class="nickname">닉네임1</span>
+                                <span class="commentDate">2024.03.16</span>
+                            </div>
+                        </div>
+                        <div class="commentContent">
+                            내용내용내용내용내용내용내용내용내용
+                        </div>
+                    </div>
+                    <div class="commentRegister">
+                        <div class="comment">
+                            <textarea placeholder="댓글을 남겨보세요"></textarea>
+                        </div>
+                        <button onclick="comment()">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-right">
+            <div class="user-profile">
+                <div class="profile">
+                    <img src="/image/basic_profile.png">
+                </div>
+                <a href="/mypage/main.html" class="userInfo">사용자 님</a>
+                <a href="/index.html" class="logout-btn">로그아웃</a>
+            </div>
+
+            <h3>게시판 순위</h3>
+            <div class="game-ranking">
+                <ul>
+                    <li class="gameRank1">
+                        <a href="./game1.html">
+                            <span>게임1</span>
+                        </a>
+                    </li>
+                    <li class="gameRank2">
+                        <a href="./game2.html">게임2</a>
+                    </li>
+                    <li class="gameRank3">
+                        <a href="./game3.html">게임3</a>
+                    </li>
+                    <li class="gameRank4">
+                        <a href="./ame4.html">게임4</a>
+                    </li>
+                    <li class="gameRank5">
+                        <a href="./game5.html">게임5</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script>
+        function comment(){
+            alert("댓글이 등록되었습니다.");
+        }
+
+        function navigateToSearch(){
+            location.href = "/search/result.html";
+        }
+    </script>
+</body>
+</html>

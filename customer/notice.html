@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/ccs/game/board.css">
+    <link rel="stylesheet" href="/ccs/customers/notice.css">
 </head>
 <body>
     <div id="wrap">
@@ -31,40 +31,26 @@
     
     <main>
         <div class="layout-left">
-            <h3>Stardew Bally</h3>
-            <div class="gameBoard">
-                <div class="searchBoard">
-                    <select>
-                        <option value="tip" selected>공략</option>
-                        <option value="question">질문</option>
-                    </select>
-                    <input type="text">
-                    <button type="button">검색</button>
+            <div class="noticeTitle">
+                <div class="nameAndMove">
+                    <h3>공지사항</h3>
+                    <button onclick="noticeList()">목록</button>
                 </div>
-                <table class="board-table">
-                    <colgroup>
-                        <col style="width: 100px;">
-                        <col>
-                        <col style="width: 100px;">
-                        <col style="width: 90px;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">구분</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">작성자</th>
-                            <th scope="col">작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>공략</td>
-                            <td>계절별 농사 팁</td>
-                            <td>사용자</td>
-                            <td>2024-08-21</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="noticeContentBox">
+                    <div class="notice_tag">공지사항 </div>
+                    <div class="notice_header">
+                        <div class="notice_title">
+                            <span>공지사항입니다.</span>
+                            <p class="notice_date">2024.03.16</p>
+                        </div>
+                        <div class="writerInfo">
+                            <img src="/image/basic_profile.png" width="30px" height="30px"> 관리자
+                        </div>
+                    </div>
+                    <div class="notice_container">
+                        공지사항입니다.
+                    </div>
+                </div>
             </div>
         </div>
         <div class="layout-right">
@@ -80,27 +66,35 @@
             <div class="game-ranking">
                 <ul>
                     <li class="gameRank1">
-                        <a href="./game/board/game1.html">
+                        <a href="./game1.html">
                             <span>게임1</span>
                         </a>
                     </li>
                     <li class="gameRank2">
-                        <a href="./game/board/game2.html">게임2</a>
+                        <a href="./game2.html">게임2</a>
                     </li>
                     <li class="gameRank3">
-                        <a href="./game/game3.html">게임3</a>
+                        <a href="./game3.html">게임3</a>
                     </li>
                     <li class="gameRank4">
-                        <a href="./game/game4.html">게임4</a>
+                        <a href="./ame4.html">게임4</a>
                     </li>
                     <li class="gameRank5">
-                        <a href="./game/game5.html">게임5</a>
+                        <a href="./game5.html">게임5</a>
                     </li>
                 </ul>
             </div>
         </div>
     </main>
-    
-</div>
+    </div>
+    <script>
+        function noticeList(){
+            location.href = "/customer/main.html";
+        }
+
+        function navigateToSearch(){
+            location.href = "/search/result.html";
+        }
+    </script>
 </body>
 </html>

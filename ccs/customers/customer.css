@@ -48,7 +48,7 @@ header {
     height: 50px;
     width: 100%;
     max-width: 706px;
-    border: 1px solid #ccc;
+    border: 1px solid #e3e5e8;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -66,7 +66,7 @@ header .searchBar input {
 .searchBar button {
     padding: 10px 20px;
     border: none;
-    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-left: 1px solid #e3e5e8; /* 경계선 추가 */
     border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
     height: 100%;
     background-color: #f0f0f0;
@@ -135,9 +135,8 @@ main {
             border: none;
         }
     
-        .search-results {
+        .customerList {
             border: none;
-            padding: 10px;
             margin-bottom: 10px;
         }
     
@@ -150,10 +149,61 @@ main {
         }
     
         .notice {
-            margin-top: 16px;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 0 1px #e3e5e8;
+            height: 520px;
+            position: relative;
+        }
+
+        .searchAndWrite {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .searchBoard {
+            display: flex;
+            align-items: center;
+        }
+        
+        .searchBoard select,
+        .searchBoard input,
+        .searchBoard button {
+            height: 30px;
+            margin-right: 10px;
+            border: 1px solid #e3e5e8;
+            border-radius: 3px;
+        }
+        
+        .searchBoard select {
+            padding: 0 5px;
+        }
+        
+        .searchBoard input {
+            padding: 0 10px;
+            width: 300px;
+        }
+        
+        .searchBoard button {
+            padding: 0 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .searchAndWrite .inquiry-buttons{
+            background-color: #2A68B9;
+            border: 1px solid #e3e5e8;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .searchAndWrite .inquiry-buttons:hover {
+            background-color: #1c4a8c;
         }
         
         .board-table {
@@ -163,8 +213,7 @@ main {
         
         .board-table th,
         .board-table td {
-            padding: 15px;
-            font-size: 14px;
+            padding: 10px;
             text-align: center;
             border-bottom: 1px solid #f2f2f2;
         }
@@ -202,30 +251,6 @@ main {
             font-weight: bolder;
         }
 
-        /* 문의하기 */
-        .inquiry-buttons {
-            display: flex;
-            justify-content: right;
-            margin-top: 20px;
-        }
-
-        /* 문의하기 버튼 스타일 */
-        .inquiry-btn {
-            padding: 8px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            background-color: #2A68B9;
-            color: white;
-        }
-
-        .inquiry-btn:hover {
-            background-color: #1c4a8c;
-        }
-
         /* 게시판 테이블 스타일 수정 */
         .board-table .title {
             text-align: left;
@@ -238,6 +263,16 @@ main {
         }
 
         /* 페이지네이션 스타일 개선 */
+        .notice .pagination {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
         .pagination {
             display: flex;
             justify-content: center;

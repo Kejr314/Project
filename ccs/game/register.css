@@ -48,7 +48,7 @@ header {
     height: 50px;
     width: 100%;
     max-width: 706px;
-    border: 1px solid #ccc;
+    border: 1px solid #e3e5e8;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -66,7 +66,7 @@ header .searchBar input {
 .searchBar button {
     padding: 10px 20px;
     border: none;
-    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-left: 1px solid #e3e5e8; /* 경계선 추가 */
     border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
     height: 100%;
     background-color: #f0f0f0;
@@ -129,92 +129,138 @@ main {
         width: 950px;
     }
 
-        .gameBoard{
-            border: 1px solid #ccc;
+    .layout-left h3 {
+        margin-top: 0;
+    }
+
+    /* 전체 폼 스타일 */
+        .question-form {
+            border: 1px solid #e3e5e8;
             border-radius: 5px;
             padding: 20px;
             margin: 0 auto;
         }
 
-        .board-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .board-table th,
-        .board-table td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #f2f2f2;
+        /* 목록 스타일 제거 */
+        .question-form ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .searchAndWrite {
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .searchBoard {
+        /* 각 항목 스타일 */
+        .question-form li {
             display: flex;
             align-items: center;
-        }
-        
-        .searchBoard select,
-        .searchBoard input,
-        .searchBoard button {
-            height: 30px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        
-        .searchBoard select {
-            padding: 0 5px;
-        }
-        
-        .searchBoard input {
-            padding: 0 10px;
-            width: 300px;
-        }
-        
-        .searchBoard button {
-            padding: 0 10px;
-            background-color: #f0f0f0;
-            cursor: pointer;
+            border-bottom: 1px solid #e3e5e8; /* 구분선 추가 */
+            padding: 10px 0; /* 구분선과 내용 간격 조정 */
+            margin-right: 20px;
         }
 
-        .searchAndWrite .btn-write{
-            background-color: #2A68B9;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            padding: 5px 10px;
-            cursor: pointer;
-            color: white;
+        /* 레이블 스타일 */
+        .question-form label {
+            margin: 0 20px;
+            padding-right: 20px;
             font-weight: bolder;
-        }
-
-        .searchAndWrite .btn-write:hover {
-            background-color: #1c4a8c;
-        }
-        
-        .board-table th {
-            background-color: #f8f8f8;
-            font-weight: bold;
-        }
-        
-        .board-table #select {
-            font-weight: bold;
-        }
-
-        .board-table #title {
-            padding-left: 20px !important;
             text-align: left;
+            margin-right: 10px;
+            width: 90px;
         }
 
-        .board-notice td {
-            padding: 5px 10px;
+        /* 입력 필드 및 선택 필드 스타일 */
+        .question-form input[type="text"],
+        .question-form input[type="password"],
+        .question-form select,
+        .question-form textarea {
+            flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+            padding: 8px;
+            border: 1px solid #e3e5e8;
+            border-radius: 3px;
+            font-size: 14px;
         }
+
+        .question-form input[type="password"]#secret {
+            width: 200px !important;
+            flex: none !important; /* flex: 1 속성을 덮어씁니다 */
+        }
+        
+        .question-form li {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e3e5e8;
+            padding: 10px 0;
+            margin-right: 20px;
+        }
+
+        .password-container {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .checkbox-label {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .question-form input[type="password"]:disabled {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+
+        /* 텍스트 영역 스타일 */
+        .question-form textarea {
+            height: 200px; /* 텍스트 영역의 높이 */
+            resize: vertical; /* 세로 방향으로만 크기 조절 가능 */
+        }
+
+        /* 체크박스 스타일 */
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .checkbox-label p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* 폼 내에서 마지막 항목의 마진 제거 */
+        .question-form li:last-child {
+            margin-bottom: 0;
+            border: none;
+        }
+
+    .buttons {
+        display: flex;
+        margin: 20px 0 10px 0;
+        justify-content: center;
+    }
+    
+    .buttons button {
+        padding: 10px 20px;
+        background-color: #2A68B9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    
+    .buttons button:hover{
+        background-color: #1c4a8c;
+    }
+
+    .buttons .submit-btn {
+        margin-right: 10px;
+    }
 
 /* 오른쪽 레이아웃 */
 .layout-right {

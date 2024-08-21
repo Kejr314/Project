@@ -49,7 +49,7 @@ header {
     height: 50px;
     width: 100%;
     max-width: 706px;
-    border: 1px solid #ccc;
+    border: 1px solid #e3e5e8;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -67,7 +67,7 @@ header .searchBar input {
 .searchBar button {
     padding: 10px 20px;
     border: none;
-    border-left: 1px solid #ccc; /* 경계선 추가 */
+    border-left: 1px solid #e3e5e8; /* 경계선 추가 */
     border-radius: 0 15px 15px 0; /* 오른쪽 둥근 모서리 */
     height: 100%;
     background-color: #f0f0f0;
@@ -129,31 +129,60 @@ main {
     width: 950px;
 }
 
+    .game-list {
+        border: 1px solid #e3e5e8;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 0 auto;
+        height: 500px;
+    }
+
+    .category-list {
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 0;
+        border-bottom: 1px solid #e3e5e8;
+    }
+
     .category-list ul {
         display: table;
         table-layout: fixed;
+        padding-top: 0;
+        padding-left: 10px;
     }
 
     .category-list li {
         display: table-cell;
     }
 
+    .category-list button {
+        background-color: #FBF0B2 ;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: #333;
+        font-weight: bolder;
+        margin-right: 10px;
+    }
+
+    .category-list button:hover {
+        background-color: #F0E5A3 ;
+    }
+
     .game-card-list ul {
-        display: table;
+        display: flex;
         list-style-type: none;
         table-layout: fixed;
         margin: auto;
     }
 
     .game-card-list li {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 10px;
-        align-items: center;
-        justify-content: center;
+        margin-right: 30px;
     }
 
     .game-card-list img {
+        display: block;
         width: 100px;
         height: 100px;
         border-radius: 20px;
@@ -162,7 +191,7 @@ main {
 
     .caption {
         text-align: center;
-        margin: 0;
+        /* margin: 0; */
         font-size: 15px;
     }
 

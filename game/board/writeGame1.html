@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의하기</title>
-    <link rel="stylesheet" href="/ccs/customers/register.css">
+    <title>게시글 등록하기</title>
+    <link rel="stylesheet" href="/ccs/game/register.css">
 </head>
 <body>
     <div id="wrap">
@@ -22,41 +22,29 @@
 
     <nav>
         <ul>
-            <li><a href="/game/main.html" class="nav-button game">게임</a></li>
+            <li><a href="/game/main.html" id="nowPage" class="nav-button game">게임</a></li>
             <li><a href="/search/filter.html" class="nav-button search">조건 검색</a></li>
             <li><a href="/mypage/main.html" class="nav-button mypage">마이 페이지</a></li>
-            <li><a href="/customer/main.html" id="nowPage" class="nav-button customer">고객센터</a></li>
+            <li><a href="/customer/main.html" class="nav-button customer">고객센터</a></li>
         </ul>
     </nav>
     
     <main>
         <div class="layout-left">
-            <h3>문의 남기기</h3>
-            <form class="inquiry-form">
+            <h3>게시글 등록하기</h3>
+            <form class="question-form">
                 <ul>
                     <li>
                         <label for="title">제목</label>
                         <input type="text" id="title" name="title" placeholder="제목을 입력하세요">
                     </li>
                     <li>
-                        <label for="inquiry-type">문의 유형</label>
-                        <select id="inquiry-type" name="inquiry-type">
+                        <label for="question-type">질문 유형</label>
+                        <select id="question-type" name="question-type">
                             <option value="" disabled selected>미선택</option>
-                            <option value="회원">회원</option>
-                            <option value="이용문의">이용문의</option>
-                            <option value="기타">기타</option>
+                            <option value="tip">공략</option>
+                            <option value="question">질문</option>
                         </select>
-                    </li>
-                    <li>
-                        <label for="secret">비밀번호</label>
-                            <div class="password-container">
-                                <input type="password" id="secret" name="secret" disabled>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="secret-checkbox" name="secret-checkbox">
-                                    <p>비밀글</p>
-                                </label>
-                            </div>
-                        </label>
                     </li>
                     <li>
                         <label for="content">내용</label>
@@ -65,11 +53,10 @@
                 </ul>
                 <div class="buttons">
                     <button type="submit" onclick="register()" class="submit-btn">등록하기</button>
-                    <button type="button" onclick="noticeList()" class="back-btn">문의 목록</button>
+                    <button type="button" onclick="noticeList()" class="back-btn">목록으로 이동</button>
                 </div>
             </form>
         </div>
-        
         <div class="layout-right">
             <div class="user-profile">
                 <div class="profile">
@@ -103,35 +90,19 @@
             </div>
         </div>
     </main>
+    </div>
     <script>
         function navigateToSearch(){
-            location.href = "/search/result.html"
+            location.href = "/search/result.html";
         }
 
         function register(){
             alert("등록되었습니다.");
-            location.href = "/customer/main.html";
         }
 
         function noticeList(){
-            location.href = "./main.html";
+            location.href = "./game1.html";
         }
-
-        document.addEventListener('DOMContentLoaded', function() {
-    const secretCheckbox = document.getElementById('secret-checkbox');
-    const secretInput = document.getElementById('secret');
-
-    secretCheckbox.addEventListener('change', function() {
-        if (this.checked) {
-            secretInput.disabled = false;
-            secretInput.focus(); // 체크박스 선택 시 비밀번호 입력칸에 포커스
-        } else {
-            secretInput.disabled = true;
-            secretInput.value = ''; // 체크 해제 시 입력된 비밀번호 초기화
-        }
-    });
-});
     </script>
-</div>
 </body>
 </html>

@@ -129,138 +129,182 @@ main {
         width: 950px;
     }
 
-    .layout-left h3 {
-        margin-top: 0;
-    }
+        .gameTitle {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10px;
+        }
 
-    /* 전체 폼 스타일 */
-        .inquiry-form {
+        .nameAndMove {
+            display: flex;
+        }
+
+        .gameTitle button {
+            background-color: #2A68B9;
+            border: 1px solid #e3e5e8;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .gameTitle button:hover {
+            background-color: #1c4a8c;
+        }
+
+        #icon {
+            width: 30px; 
+            height: 30px;
+            border-radius: 4px;
+            margin-right: 20px;
+        }
+
+        .gameTitle h3 {
+            margin: 0;
+            color: #043C77;
+            border: 1 solid #333;
+        }
+
+        .articleContentBox {
             border: 1px solid #e3e5e8;
             border-radius: 5px;
             padding: 20px;
             margin: 0 auto;
+            height: 500px;
+            position: relative;
         }
-
-        /* 목록 스타일 제거 */
-        .inquiry-form ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        /* 각 항목 스타일 */
-        .inquiry-form li {
+        
+        .article_header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e3e5e8; /* 구분선 추가 */
-            padding: 10px 0; /* 구분선과 내용 간격 조정 */
-            margin-right: 20px;
         }
-
-        /* 레이블 스타일 */
-        .inquiry-form label {
-            margin: 0 20px;
-            padding-right: 20px;
-            font-weight: bolder;
-            text-align: left;
-            margin-right: 10px;
-            width: 90px;
-        }
-
-        /* 입력 필드 및 선택 필드 스타일 */
-        .inquiry-form input[type="text"],
-        .inquiry-form input[type="password"],
-        .inquiry-form select,
-        .inquiry-form textarea {
-            flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
-            padding: 8px;
-            border: 1px solid #e3e5e8;
-            border-radius: 3px;
+        
+        .article_tag {
+            color: #2A68B9;
             font-size: 14px;
-        }
-
-        .inquiry-form input[type="password"]#secret {
-            width: 200px !important;
-            flex: none !important; /* flex: 1 속성을 덮어씁니다 */
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
         }
         
-        .inquiry-form li {
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #e3e5e8;
-            padding: 10px 0;
-            margin-right: 20px;
-        }
-
-        .password-container {
-            display: flex;
-            align-items: center;
-            flex: 1;
+        .article_title {
+            flex-grow: 1;
+            font-size: 17px;
+            font-weight: bold;
+            margin-left: 10px;
         }
         
-        .checkbox-label {
-            margin-left: 10px;
+        .article_title .article_date {
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+        
+        .writerInfo {
             display: flex;
             align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 10px;
         }
-
-        .inquiry-form input[type="password"]:disabled {
-            background-color: #f0f0f0;
-            cursor: not-allowed;
-        }
-
-        /* 텍스트 영역 스타일 */
-        .inquiry-form textarea {
-            height: 200px; /* 텍스트 영역의 높이 */
-            resize: vertical; /* 세로 방향으로만 크기 조절 가능 */
-        }
-
-        /* 체크박스 스타일 */
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
-        }
-
-        .checkbox-label input[type="checkbox"] {
+        
+        .writerInfo img {
             margin-right: 5px;
         }
-
-        .checkbox-label p {
-            margin: 0;
+        
+        .article_container {
+            border-top: 1px solid #e3e5e8;
+            overflow-y: auto;
+            padding: 10px;
             font-size: 14px;
         }
+        
+        .commentBox {
+            justify-content: flex-start;
+            align-items: stretch;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        
+        .commentList {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-bottom: 1px solid #e3e5e8;
+            border-top: 1px solid #e3e5e8;
+            border-radius: 5px;
+            margin-bottom: 10px; /* 다른 댓글들과 간격을 주기 위해 */
+        }
+        
+        .commentUserInfo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profileImage {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .nickname {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .commentDate {
+            font-size: 12px;
+            color: #666;
+        }        
 
-        /* 폼 내에서 마지막 항목의 마진 제거 */
-        .inquiry-form li:last-child {
-            margin-bottom: 0;
-            border: none;
+        .commentContent {
+            font-size: 13px;
+        }
+        
+        .commentRegister {
+            display: flex;
+            width: 100%;
         }
 
-    .buttons {
-        display: flex;
-        margin: 20px 0 10px 0;
-        justify-content: center;
-    }
-    
-    .buttons button {
-        padding: 10px 20px;
-        background-color: #2A68B9;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: bolder;
-        cursor: pointer;
-    }
-    
-    .buttons button:hover{
-        background-color: #1c4a8c;
-    }
-
-    .buttons .submit-btn {
-        margin-right: 10px;
-    }
+        .comment {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #e3e5e8;
+        }
+        
+        .comment textarea {
+            width: 100%;
+            border: none;
+            resize: none;
+            outline: none;
+        }
+        
+        .articleContentBox button {
+            align-self: flex-start; /* 버튼을 상단에 정렬 */
+            padding: 10px;
+            margin-left: 10px;
+            background-color: #2A68B9;
+            border: 1px solid #e3e5e8;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .articleContentBox button:hover {
+            background-color: #1c4a8c;
+        }
 
 /* 오른쪽 레이아웃 */
 .layout-right {
