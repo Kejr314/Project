@@ -75,6 +75,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -167,6 +168,7 @@ main {
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-weight: bolder;
             transition: background-color 0.3s ease;
         }
 
@@ -183,6 +185,7 @@ main {
             border-top-left-radius: 5px;
             background-color: #f0f0f0;
             font-size: 15px;
+            font-weight: bolder;
         }
 
         .tab-button:hover {
@@ -297,7 +300,7 @@ main {
         }
         
         #tab-profileInfo .userRemove-btn {
-            background-color: #ff4d4d;
+            background-color: #ff0000;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -306,6 +309,7 @@ main {
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
+            font-weight: bolder;
             transition: background-color 0.3s ease;
             text-align: left;
         }
@@ -330,12 +334,20 @@ main {
         .favorite-main table {
             width: 100%;
             border-collapse: collapse;
+            height: 400px;
+        }
+
+        .deleteBtn {
+            background-color: white !important;
+            border: none !important;
+            color: #333 !important;
         }
 
         .favorite-main th {
             padding: 10px 0;
             border-bottom: 1px solid #ccc;
             background-color: #f2f2f2;
+            font-size: 15px;
         }
 
         .favorite-main .gameName {
@@ -344,6 +356,7 @@ main {
 
         .favorite-main td {
             padding: 10px;
+            font-size: 15px;
             text-align: center;
             border-bottom: 1px solid #ccc;
         }
@@ -394,6 +407,7 @@ main {
                 background-color: #ff0000;
                 color: rgb(255, 255, 255);
                 text-align: center;
+                font-weight: bolder;
                 transition: background-color 0.3s ease;
             }
 

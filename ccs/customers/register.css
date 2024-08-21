@@ -74,6 +74,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -94,6 +95,12 @@ nav ul {
 nav li {
     display: table-cell;
     margin: 0 5px;
+}
+
+nav #nowPage {
+    font-weight: bold;
+    color: #2A68B9;
+    box-shadow: 0px 5px 0px -2px #2A68B9;;
 }
 
 .nav-button {
@@ -120,6 +127,10 @@ main {
 
     .layout-left{
         width: 950px;
+    }
+
+    .layout-left h3 {
+        margin-top: 0;
     }
 
     /* 전체 폼 스타일 */
@@ -200,7 +211,7 @@ main {
 
         /* 텍스트 영역 스타일 */
         .inquiry-form textarea {
-            height: 100px; /* 텍스트 영역의 높이 */
+            height: 200px; /* 텍스트 영역의 높이 */
             resize: vertical; /* 세로 방향으로만 크기 조절 가능 */
         }
 
@@ -213,6 +224,11 @@ main {
 
         .checkbox-label input[type="checkbox"] {
             margin-right: 5px;
+        }
+
+        .checkbox-label p {
+            margin: 0;
+            font-size: 14px;
         }
 
         /* 폼 내에서 마지막 항목의 마진 제거 */

@@ -74,6 +74,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {

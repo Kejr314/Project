@@ -74,6 +74,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -153,10 +154,12 @@ nav li {
 
 .login-btn {
     margin-top: 20px;
+    margin-bottom: 0;
     padding: 15px 0;
     width: 100%;
-    background-color: #7FC9E2;
-    color: black;
+    background-color: #2A68B9;
+    color: white;
+    font-weight: bolder;
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -164,7 +167,7 @@ nav li {
 }
 
 .login-btn:hover {
-    background-color: #41ADD1;
+    background-color: #1c4a8c;
 }
 
 .hr {

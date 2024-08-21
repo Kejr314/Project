@@ -74,6 +74,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -162,7 +163,8 @@ main {
         
         .board-table th,
         .board-table td {
-            padding: 10px;
+            padding: 15px;
+            font-size: 14px;
             text-align: center;
             border-bottom: 1px solid #f2f2f2;
         }
@@ -177,7 +179,7 @@ main {
         }
 
         .board-notice td {
-            padding: 5px 10px;
+            padding: 15px;
         }
         
         .board-tag-txt {
@@ -196,7 +198,7 @@ main {
             display: inline-block;
             padding: 2px 5px;
             color: #333;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bolder;
         }
 
@@ -298,6 +300,7 @@ main {
                 border: 1px solid rgba(0, 0, 0, .06);
                 border-radius: 4px;
                 background-color: #ff0000;
+                font-weight: bolder;
                 color: rgb(255, 255, 255);
                 text-align: center;
                 transition: background-color 0.3s ease;

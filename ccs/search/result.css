@@ -74,6 +74,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -240,14 +241,15 @@ main {
             padding: 15px 0;
             border: 1px solid rgba(0, 0, 0, .06);
             border-radius: 4px;
-            background-color: #7FC9E2;
-            color: black;
+            background-color: #2A68B9;
+            color: white;
             text-align: center;
             transition: background-color 0.3s ease;
+            font-weight: bolder;
         }
 
         .login:hover {
-            background-color: #41ADD1;
+            background-color: #1c4a8c;
         }
 
         
@@ -257,14 +259,15 @@ main {
             padding: 15px 0;
             border: 1px solid rgba(0, 0, 0, .06);
             border-radius: 4px;
-            background-color: #e3e5e8;
+            background-color: #f0f0f0;
             color: black;
             text-align: center;
+            font-weight: bolder;
             transition: background-color 0.3s ease;
         }
         
         .register:hover {
-            background-color: #CFD0D3;
+            background-color: #e0e0e0;
         }
 
         .user-find{

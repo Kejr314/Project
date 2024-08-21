@@ -75,6 +75,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -234,6 +235,7 @@ main {
                 color: white;
                 text-align: center;
                 transition: background-color 0.3s ease;
+                font-weight: bolder;
             }
 
             .login:hover {
@@ -250,6 +252,7 @@ main {
                 background-color: #f0f0f0;
                 color: black;
                 text-align: center;
+                font-weight: bolder;
                 transition: background-color 0.3s ease;
             }
             

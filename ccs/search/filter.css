@@ -74,6 +74,7 @@ header .searchBar input {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .searchBar button:hover {
@@ -126,6 +127,10 @@ main {
 .layout-left{
     width: 950px;
 }
+
+    .layout-left h3 {
+        margin-top: 0;
+    }
 
 /* --------------------------------------------------------------------------- */
     /* 검색 컨테이너 스타일 */
@@ -207,11 +212,12 @@ main {
         /* 검색 버튼 스타일 */
         .search-button {
             background-color: #2A68B9;
-            border: 1px solid #ccc;
+            border: none;
             border-radius: 3px;
             padding: 5px 15px;
             cursor: pointer;
             color: white;
+            font-weight: bolder;
         }
 
         .search-button:hover {
@@ -225,7 +231,7 @@ main {
             border-radius: 5px;
             padding: 15px;
             text-align: center;
-            height: 300px;
+            height: 250px;
         }
 /* --------------------------------------------------------------------------- */
 
@@ -274,6 +280,7 @@ main {
             color: rgb(255, 255, 255);
             text-align: center;
             transition: background-color 0.3s ease;
+            font-weight: bolder;
         }
 
         .logout-btn:hover {
@@ -281,7 +288,6 @@ main {
         }
 
     .game-ranking {
-        
         padding: 21px 20px 18px;
         line-height: 20px;
         border-radius: 5px;
